@@ -7,9 +7,14 @@
   <title>Mahlet Molla — AI Safety &amp; Evaluation</title>
   <meta name="description" content="Academic portfolio and technical blog of Mahlet Molla: LLM evaluation, AI safety, and machine learning for materials science.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Include this same element in long-form post pages; set body data-page="post". -->
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ===================== HEADER =====================
@@ -18,7 +23,7 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="nav-brand" href="#top">Mahlet Molla</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
         <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
       </button>
       <ul class="nav-menu" id="nav-menu">
@@ -33,8 +38,7 @@
 
   <main id="main">
     <!-- ===================== HERO =====================
-         EDITABLE: headline, tagline, button labels/links.
-         The CV button points to assets/cv-placeholder.pdf — add your own PDF with that name. -->
+         EDITABLE: headline, tagline, button labels/links. -->
     <section class="hero" id="top">
       <div class="hero-inner">
         <img class="hero-photo" src="assets/profile-photo-placeholder.jpg" alt="Portrait of Mahlet Molla" width="160" height="160">
@@ -51,8 +55,7 @@
     </section>
 
     <!-- ===================== ABOUT =====================
-         EDITABLE: biography paragraphs. Highlights list is filled from
-         the `highlights` array in script.js. -->
+         EDITABLE: biography paragraphs. Highlights are in script.js. -->
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container">
         <h2 class="section-title" id="about-title">About</h2>
@@ -67,8 +70,7 @@
       </div>
     </section>
 
-    <!-- ===================== RESEARCH INTERESTS (features) =====================
-         EDITABLE: cards are generated from the `researchAreas` array in script.js. -->
+    <!-- ===================== RESEARCH INTERESTS ===================== -->
     <section class="section research" id="research" aria-labelledby="research-title">
       <div class="container">
         <h2 class="section-title" id="research-title">Research Interests</h2>
@@ -76,9 +78,7 @@
       </div>
     </section>
 
-    <!-- ===================== PROJECTS (gallery) =====================
-         EDITABLE: generated from the `projects` array in script.js.
-         Images live in assets/. Filter buttons use each project's `tags`. -->
+    <!-- ===================== PROJECTS & PUBLICATIONS ===================== -->
     <section class="section projects" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <h2 class="section-title" id="projects-title">Projects &amp; Publications</h2>
@@ -87,9 +87,7 @@
       </div>
     </section>
 
-    <!-- ===================== BLOG =====================
-         EDITABLE: post previews come from the `blogPosts` array in script.js.
-         To publish a full post, create e.g. posts/my-post.html and set its `link`. -->
+    <!-- ===================== BLOG ===================== -->
     <section class="section blog" id="blog" aria-labelledby="blog-title">
       <div class="container">
         <h2 class="section-title" id="blog-title">Tech Blog</h2>
@@ -97,10 +95,7 @@
       </div>
     </section>
 
-    <!-- ===================== CONTACT =====================
-         EDITABLE: intro text. Your email and social links come from
-         `siteConfig` in script.js. The form opens the visitor's email app
-         (mailto) — no server needed. -->
+    <!-- ===================== CONTACT ===================== -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
         <div>
@@ -122,8 +117,7 @@
     </section>
   </main>
 
-  <!-- ===================== FOOTER =====================
-         EDITABLE: footer text. Year updates automatically. -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <p>&copy; <span id="footer-year"></span> Mahlet Molla. Built with plain HTML, CSS &amp; JavaScript.</p>
     <a href="#top" class="footer-top">Back to top ↑</a>
