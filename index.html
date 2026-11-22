@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDITABLE: page title and description shown in search results -->
+  <title>Mahlet Molla — AI Safety &amp; Evaluation</title>
+  <meta name="description" content="Academic portfolio and technical blog of Mahlet Molla: LLM evaluation, AI safety, and machine learning for materials science.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER =====================
+       EDITABLE: site name (brand text) and nav link labels.
+       Each nav href must match a section id below. -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-brand" href="#top">Mahlet Molla</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO =====================
+         EDITABLE: headline, tagline, button labels/links.
+         The CV button points to assets/cv-placeholder.pdf — add your own PDF with that name. -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <img class="hero-photo" src="assets/profile-photo-placeholder.jpg" alt="Portrait of Mahlet Molla" width="160" height="160">
+        <div>
+          <p class="hero-kicker">AI Safety · LLM Evaluation · Machine Learning</p>
+          <h1 class="hero-title">Hi, I'm Mahlet Molla.</h1>
+          <p class="hero-tagline">PhD in Materials Science &amp; Engineering turned AI safety researcher. I evaluate LLMs and agentic AI systems, and study how they can fail — including how they might collude.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View my work</a>
+            <a class="button button-secondary" href="assets/cv-placeholder.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT =====================
+         EDITABLE: biography paragraphs. Highlights list is filled from
+         the `highlights` array in script.js. -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-title" id="about-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I currently work as an LLM and agentic AI evaluator at Scale AI, where I design and run evaluations that probe model reasoning, tool use, and reliability.</p>
+            <p>I recently completed my PhD in Materials Science and Engineering, where I used Python for machine learning and data science — building models to understand and predict material behavior from experimental and simulation data.</p>
+            <p>I'm now transitioning into technical AI safety. I completed the BlueDot Impact Technical AI Safety course and an Apart Research sprint on AI collusion. [Placeholder: add a sentence about the safety questions you care most about.]</p>
+          </div>
+          <ul class="highlight-list" id="highlight-list" aria-label="Highlights"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH INTERESTS (features) =====================
+         EDITABLE: cards are generated from the `researchAreas` array in script.js. -->
+    <section class="section research" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <h2 class="section-title" id="research-title">Research Interests</h2>
+        <div class="card-grid" id="research-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS (gallery) =====================
+         EDITABLE: generated from the `projects` array in script.js.
+         Images live in assets/. Filter buttons use each project's `tags`. -->
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title" id="projects-title">Projects &amp; Publications</h2>
+        <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter projects"></div>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== BLOG =====================
+         EDITABLE: post previews come from the `blogPosts` array in script.js.
+         To publish a full post, create e.g. posts/my-post.html and set its `link`. -->
+    <section class="section blog" id="blog" aria-labelledby="blog-title">
+      <div class="container">
+        <h2 class="section-title" id="blog-title">Tech Blog</h2>
+        <div class="blog-list" id="blog-list"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT =====================
+         EDITABLE: intro text. Your email and social links come from
+         `siteConfig` in script.js. The form opens the visitor's email app
+         (mailto) — no server needed. -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title" id="contact-title">Get in touch</h2>
+          <p>I'm open to research collaborations, AI safety roles, and conversations about evaluation. The form below opens your email app with the message pre-filled.</p>
+          <ul class="social-list" id="social-list"></ul>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required>
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required>
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="5" required></textarea>
+          <button class="button button-primary" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER =====================
+         EDITABLE: footer text. Year updates automatically. -->
+  <footer class="site-footer">
+    <p>&copy; <span id="footer-year"></span> Mahlet Molla. Built with plain HTML, CSS &amp; JavaScript.</p>
+    <a href="#top" class="footer-top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
